@@ -53,4 +53,12 @@
     e.preventDefault();
   });
 
+  // Initialize tooltips
+  $(window).on('load', function() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  });
+
 })(jQuery); // End of use strict
